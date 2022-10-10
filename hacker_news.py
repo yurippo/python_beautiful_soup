@@ -15,9 +15,11 @@ soup = BeautifulSoup(yc_webpage,"html.parser") #and our Soup was created
 
 print(soup.title.get_text())
 
+
 #this code grabs all the article tags
-articles = soup.find_all (name = "a",class_= "titlelink")
+articles = soup.find_all (class_="titleline") #(name ="a",class_="titleline")
 #creating these 2 lists to save each of the articles and links in these 2 lists
+
 article_texts = []
 article_links = []
 
@@ -46,14 +48,14 @@ print(article_up_votes)
 #Hint use the index of the largest number inside the article_upvotes list as a guide)
 
 max_value = max(article_up_votes)
-#print(max_value)
+print(max_value)
 
-max_index = article_up_votes. index(max_value)
-#print(max_index)
+max_index = article_up_votes.index(max_value)
+print(max_index)
 
-result_list = [article_texts[max_index],article_links[max_index],max_value]
+#result_list = [article_texts[max_index],article_links[max_index],max_value]
 
-print(result_list)
+#print(result_list)
 
 #Another option to resolve this challenge
 

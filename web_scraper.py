@@ -1,4 +1,5 @@
 import bs4
+from bs4 import BeautifulSoup
 import requests
 
 
@@ -10,7 +11,7 @@ EAU_URL = HOST + PATH + QUERY_STRING
 
 response = requests.get(EAU_URL)
 
-soup = bs4.BeautifulSoup(response.text)
+soup = bs4.BeautifulSoup(response.text,"html.parser")
 
 # print(soup)
 
